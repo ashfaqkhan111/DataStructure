@@ -69,4 +69,20 @@ Answer : rhis method work on if statement which state that if the gpa is greater
         
 
 
-        
+2.2.3 Questions 
+ 
+Q1. In the StudentMain class, indicate the line of program code used for the instance process!
+Amswer: instance mean object so this line is instance Student st1 = new Student (); 
+
+Q2. How do I access the attributes and methods of an object? 
+Answer : 
+        to acces attributes first write object then dotand then  attribute name and assignment oprater 
+        like st1.name="khan";
+        for method it is same object name then dot then method ();
+        like st1.updategpa(3.4);
+
+q.4 What are the output output results of  the method tampilkanInformasi() first and second 
+    different? 
+Answer: 
+        first this function will print the values which we assign at the begining 
+        but later the updategpa(); and updateclass(); it will print the new values.        
