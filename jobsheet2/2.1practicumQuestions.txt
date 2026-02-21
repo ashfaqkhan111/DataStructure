@@ -85,4 +85,44 @@ q.4 What are the output output results of  the method tampilkanInformasi() first
     different? 
 Answer: 
         first this function will print the values which we assign at the begining 
-        but later the updategpa(); and updateclass(); it will print the new values.        
+        but later the updategpa(); and updateclass(); it will print the new values.  
+
+
+
+
+
+2.3.3 Questions 
+   
+Q1. In  the Mahasiswa class  in practicum 3, indicate the program code line used to declare a 
+    parameterized constructor!
+
+    this line in class student is constructor with parameters 
+
+    public Student(String name, String nim, String studentClass, double gpa){
+        this.name= name;
+        this.nim = nim;
+        this.studentClass = studentClass;
+        this.gpa = gpa; }
+
+Q2. Pay attention to the StudentMain class. What exactly does the following line of program do? 
+    Student st2 = new Student("ashfaq khan","254107020262", "T4" , 2.5)
+Answer: 
+
+        this line create new veriable st2 and then call the parameter constructor pass the values and 
+        save it in st2 veriable.
+
+
+
+Q3. Remove the default constructor on  the Mahasiswa class, and then compile and run the 
+    program. How did it turn out? Explain why this is the case! 
+
+Answer: if i remove the default constructor    public Student (){}     the program will show errors 
+        beacuse some time java create constructor by it self but whn i create my own constructor
+        manually java thinks the programmer is maniging it manually so when i remove this line    public Student (){}
+        in the main class we have this constructor  Student st1 = new Student(); so the default constructor will ot find 
+        matching thats why it turn out.
+
+Q3. After instantiating the object, do the methods in the Mahasiswa class  have to be accessed 
+sequentially? Explain why!
+
+Answer: no you can call them in any order even multiple times.
