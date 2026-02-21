@@ -41,5 +41,15 @@ public class StudentMain254107020262 {
     st2.updateClass("T8");
     st2.updateGpa(3.6);
     st2.displayInformation();
+
+    // parameter constructor with student name 
+
+     System.out.println("\n-----constructor with parameter Student name output ----\n");
+
+    Student st3Khan = new Student("khan","1286764","T9",4.0);
+    st3Khan.displayInformation();
+    st3Khan.updateClass("T5");
+    st3Khan.updateGpa(3.9);
+    st3Khan.displayInformation();
 } 
 }

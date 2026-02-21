@@ -14,7 +14,7 @@ public class Mahasiswa254107020262{
 
     public Student(){  // default constructor
 
-    }
+   }
 
     public Student(String name, String nim, String studentClass, double gpa){ // paramater constructor
         this.name= name;
