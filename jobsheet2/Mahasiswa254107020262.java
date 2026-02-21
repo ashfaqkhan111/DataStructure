@@ -8,9 +8,21 @@ public class Mahasiswa254107020262{
 
  class Student {  //this class include all the method which will be executed by main method 
     String name;
-    int nim;
+    String nim;
     String studentClass;
     double gpa;
+
+    public Student(){  // default constructor
+
+    }
+
+    public Student(String name, String nim, String studentClass, double gpa){ // paramater constructor
+        this.name= name;
+        this.nim = nim;
+        this.studentClass = studentClass;
+        this.gpa = gpa;
+    }
+
 
     
 
@@ -30,7 +42,7 @@ public class Mahasiswa254107020262{
     void updateGpa (double newGpa){ // change gpa
         
             gpa = newGpa;
-            System.out.print("gpa updated");
+            System.out.println("gpa updated");
     }
 
     String performanceGrade (double gpa){ // convert numbers to words grades
@@ -48,9 +60,9 @@ public class Mahasiswa254107020262{
             return "Avrage";
         }
         else {
-             return "poor";
+                return "poor";
         }
-           
+
         
     }
     
