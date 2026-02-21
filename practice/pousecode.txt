@@ -1,0 +1,18 @@
+START
+
+FOR i ← 1 TO 15 
+
+    IF i ≠ 6 OR i ≠ 10 THEN
+    CONTINUE
+
+        IF i MOD 2 ≠ 0 THEN
+            PRINT "*"
+        ELSE
+            PRINT i
+        END IF
+
+    END IF
+
+END FOR
+
+END

@@ -8,7 +8,7 @@ public class LectureSchadule {
 
         System.out.print("Enetr the number of courses : ");
         int n = in.nextInt();
-         in.nextLine();
+        in.nextLine();
 
         String [][] Schadule = new String [n][4];
 
