@@ -1,0 +1,72 @@
+Quesions Practicum 2.1
+
+Q.1 Name two characteristics of a class or object!
+
+Answer: the characteristics of class and object is attributes and methods.
+
+
+
+Q.2 Pay attention to the Mahasiswa class in Practicum 1, how many attributes do the Student class 
+have? Mention what the attributes are! 
+
+Answer:the class Student has 4 attributes  1, nim 2, name 3, studentClass 4, Gpa.
+
+
+Q.3 How many methods does the class have? Mention what the methods are!
+
+Answer : the class Student has 4 method and 1 main mathod to execute the methodes in side class Students 
+            method 1  displayInformation();
+                   2 changeClass();
+                   3 changeGpa();
+                   4 performanceGrade();
+
+
+
+Q.4 Pay attention to  the method updateIpk contained in  the Mahasiswa class. Modify the 
+content of the method so that the GPA entered is valid, namely first checking whether the 
+GPA entered is in the range of 0.0 to 4.0 (0.0 <= GPA <= 4.0). If the GPA is not in that range, 
+the message is issued: "GPA is invalid. Must be between 0.0 and 4.0".
+
+Answer: this easy and possible using  if statement 
+
+            
+        if (gpa < 0 || gpa >4){
+            return "invalid ";
+        }
+        else if(gpa >= 3.5){
+            return "Excellent";
+        }
+        else if( gpa >=3.0){
+            return "Good";
+        }
+        else if (gpa >= 2.5){
+            return "Avrage";
+        }
+        else {
+             return "poor";
+        
+    }
+
+Q.5 Explain how  the nilaiKinerja() method  works in evaluating student performance, what 
+criteria are used to determine the performance value, and what is returned by the 
+nilaiKinerja()  method? 
+
+Answer : rhis method work on if statement which state that if the gpa is greater then 3.5 return value which is string "excellent"
+        and voice versa else return "poor" when the gpa is less then 2.5 then re turn value "poor" so it work on the camparing values 
+        of gpa with the value which we assigned. 
+
+         if(gpa >= 3.5){
+            return "Excellent";
+        }
+        else if( gpa >=3.0){
+            return "Good";
+        }
+        else if (gpa >= 2.5){
+            return "Avrage";
+        }
+        else 
+            return "poor";
+        
+
+
+        
