@@ -213,6 +213,9 @@ public class prtc1{
             // }
 
             // System.out.print(" "+psum+" "+nsum);
-    }
+
+
+        
+}
 
 }
