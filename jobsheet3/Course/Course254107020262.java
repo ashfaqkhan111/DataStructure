@@ -23,7 +23,7 @@ public class Course254107020262 {
 
     public void addData(){
 
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); 
 
        
          String code,name;
