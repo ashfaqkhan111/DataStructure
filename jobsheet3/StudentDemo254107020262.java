@@ -11,7 +11,7 @@ public class StudentDemo254107020262 {
         student[0].Class = "Ti-1i";
         student[0].gpa = (float) 3.7;
 
-        student [1] =new Student254107020262();
+        student [1] =new Student254107020262(); 
 
         student [1].name = "rayyan";
         student [1].nim = "333394842";
