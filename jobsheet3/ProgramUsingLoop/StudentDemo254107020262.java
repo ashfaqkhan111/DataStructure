@@ -12,7 +12,7 @@ public class StudentDemo254107020262 {
             st1[i]=new Student254107020262();
 
             System.out.print("Enter name : ");
-            st1[i].name = in.nextLine();
+            st1[i].name = in.nextLine(); 
 
             System.out.print("Enter nim : ");
             st1[i].nim = in.nextLine();

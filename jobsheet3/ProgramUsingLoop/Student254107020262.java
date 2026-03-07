@@ -13,6 +13,6 @@ public class Student254107020262 {
             System.out.println("class :  "+Class);
             System.out.println("gpa :  "+gpa);
             System.out.println("\n=================\n");
-        
+         
     }
 }
