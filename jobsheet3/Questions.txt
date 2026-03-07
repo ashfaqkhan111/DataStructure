@@ -1,0 +1,131 @@
+3.2.3	Question
+
+ 1.	Based on test 3.2, does a class that will create an array of objects always have to have both attributes and methods ? Explain!
+
+ Answer: 
+        Class with only attributes is possible to create array of objects 
+        e.g 
+            class Student {
+                nim String;
+                name String;
+            } Student [] st1 = new Student [2];
+
+            class with only methods are also possible 
+            e.g 
+                class Student {
+                    void input (int marks, String name ){
+
+                    }
+                }Student [] st2 = new Student [2]; 
+
+                 /// but you cannot assign value until you declare attributes but there is special case 
+                     you can assign values when you wants to print through method 
+                 e.g
+
+                    class Student {
+                        void input (String name, String nim){
+                            System.out.print(name,nim);
+                        }
+                    }
+
+
+                class with out attributes and methods are also possible to create array of objects
+                e.g
+                    class Student {
+
+                    } Student [] st3 = new Student[2];
+
+                    ///with this you can create array of onject but you cannot assign  values until you initialize attributes.
+
+
+2.	What does the following program code do?
+    Studet [] arrayOfStudent = new Student[3];
+
+Answer : 
+        this create an array with 3 memory spaces to store three objects
+        but this will be empty until until you create objects wthout objects if you assign values it will give
+        NullPointerError.
+
+
+3.	Does the Student class have a constructor? If not, why is the constructor called in the following line of the program?
+        arrayOfStudent[0] = new Student();
+
+Answer : 
+        yes the java assign a default constructor in the program if you did not create it manually 
+        this line of code crate object at index 0 
+
+
+4.	What does the following program code do?
+
+arrayOfMahasiswa[0] = new Mahasiswa();
+arrayOfMahasiswa[0].nim = "244107060033";
+arrayOfMahasiswa[0].nama = "AGNES TITANIA KINANTI";
+arrayOfMahasiswa[0].kelas = "SIB-1E";
+arrayOfMahasiswa[0].ipk = (float) 3.75;
+
+Answer : 
+        the first line create object at index 0 and the rest of the lines assign values to the attributes 
+
+
+
+
+3.3.3	Question
+
+1.	Add the printInfo() method to the Student class then modify the program code in step no. 3.
+
+Answer: 
+        the printInfo() method is added to the class student and then i call the method to print using loop in 
+        main method 
+          System.out.println("\n=======Display======\n");
+        for (int i=0; i<st1.length; i++){
+             System.out.println("Data student ke-"+(i+1));
+            st1[i].printInfo();
+        }
+
+
+2.	Suppose you have a new array array of type Students named myArrayOfStudents . Why does the following code cause an error?
+Mahasiswa[] myArrayOfMahasiswa = new Mahasiswa[3];
+myArrayOfMahasiswa[0].nim = "244107060033";
+myArrayOfMahasiswa[0].nama = "AGNES TITANIA KINANTI";
+myArrayOfMahasiswa[0].kelas = "SIB-1E";
+myArrayOfMahasiswa[0].ipk = (float) 3.75;
+
+
+Answer : 
+        this code will give error beacuse the object is not created yet.
+
+
+3.4.3	Question
+
+
+Answer : 
+        
+        Yes, a class can have more than one constructor. This is called constructor overloading, where multiple constructors 
+        have the same name but different parameter lists to initialize objects in different ways.
+
+        e.g 
+            class Student {
+
+    String name;
+    String nim;
+    float gpa;
+
+    // Constructor 1 (no parameter)
+    Student() {
+        name = "Unknown";
+        nim = "000";
+        gpa = 0;
+    }
+
+    // Constructor 2 (with parameters)
+    Student(String name, String nim, float gpa) {
+        this.name = name;
+        this.nim = nim;
+        this.gpa = gpa;
+    }
+}
+
+
+
+
+    
