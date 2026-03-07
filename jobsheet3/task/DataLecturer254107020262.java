@@ -42,7 +42,7 @@ public class DataLecturer254107020262 {
         int female = 0;
         int femaleAge =0;
 
-        System.out.println("\n======Avrage age of lecturers======\n");
+        System.out.println("\n======Avrage age of lecturers======\n"); 
 
         for (int i=0; i<lecturer.length; i++){
             if(lecturer[i].gender){

@@ -49,7 +49,7 @@ in.nextLine();
         data.numberOfLecturerPerGender(lecturer);
         data.avrageOfAgeLecturerPerGender(lecturer);
         data.infoOldestLecturer(lecturer);
-        data.inforYoungest(lecturer);
+        data.inforYoungest(lecturer); 
     }
     
 }

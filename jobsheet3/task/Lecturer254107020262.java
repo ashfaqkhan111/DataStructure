@@ -18,6 +18,6 @@ public class Lecturer254107020262 {
         System.out.println("Code :  "+code);
         System.out.println("Name :  "+name);
         System.out.println("Age :  "+age);
-        System.out.println("Gender :  "+gender);
+        System.out.println("Gender :  "+gender); 
     }
 }
