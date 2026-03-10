@@ -10,7 +10,10 @@ public class CourseDemo254107020262 {
 Course254107020262 course = new Course254107020262(size);
         
             course.addData();
-            course.displayData();
+          
+             course.displayData();
+           
+            // course.displayData();
         
     }
 

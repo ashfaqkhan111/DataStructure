@@ -35,26 +35,38 @@ public class Course254107020262 {
             System.out.print("Enter course Code : ");
           code = in.nextLine();
 
+
+
             System.out.print("Enter course name : ");
             name = in.nextLine();
+
+         
             
             System.out.print("Enter SKS : ");
             sks = in.nextInt();
 
             System.out.print("Enter Total hours : ");
             totalHours = in.nextInt();
+            in.nextLine();
+
+            
 
             
 
             course[i] = new Course254107020262(code, name, sks, totalHours);
+
+                
         }
     }
 
     public void displayData(){
-        System.out.print("Code :   "+code);
-            System.out.print("Name :   "+name);
-            System.out.print("SKS  :   "+sks);
-            System.out.print("Total Hours :   "+totalHours);
+        for(int i =0; i<course.length; i++){
+             System.out.println("Code :   "+course[i].code);
+            System.out.println("Name :   "+course[i].name);
+            System.out.println("SKS  :   "+course[i].sks);
+            System.out.println("Total Hours :   "+course[i].totalHours);
+        }
+       
     }
     
 }
