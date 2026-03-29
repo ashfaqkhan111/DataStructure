@@ -1,0 +1,64 @@
+Experiment 1 Questions 
+
+1.	In the base case of the Divide and Conquer algorithm for calculating factorial, explain the differences
+ in the code structure between the if and else conditions!
+
+ Answer :
+            this conditional statement is the stoping point for this recursive function it says if x==1 then return 1 beacuse 1! is equal 1 
+            so if in the begining user enter 1 program will return 1 other case it works x-1 so if user enter 5 it will start 5-1 then 4-1 then 3-1 and 
+            so on when x reach 1 it  will stop the function from recalling beacuse the condition comes true.
+             
+
+2.	Is it possible to modify the loop in the factorialBF() method to use an alternative 
+to the for loop? Please explain and give example if needed!
+
+Answer: yes it is possible using while 
+             int fac = 1;
+        int i=1;
+        while(i<=x){
+            fac = fac*i;
+            i++;
+        }
+
+        return fac;
+    updated int the program as well.
+
+
+3.	Please explain the differences between facto = facto*i; and int facto = n * factorialDC(n-1); !
+
+    Answer:
+            facto = facto*i;  this is using brute force method for-loop or while loop
+            int intiial facto is ste to 1 facto=1; i=1; when the loop increase the facto will multiplied with 
+            i example 3! 
+
+            so facto =1;  i=1;
+
+            loop increase i=2 so 2*facto which is one so facto = 2
+
+            now loop increase i=3  so 3*facto which is 2 so facto = 6
+
+            now facto = 6 and 3! is 6 
+
+            ////////
+            now int facto = n * factorialDC(n-1);
+            this is recursive function  
+            it will multiply the orignaal value of n with function n-1
+
+            example : 4!
+
+            n=4 
+
+            facto = n*factorialDC(n-1);
+            return facto;
+
+            factorialDC(4)
+            = 4 * factorialDC(3)
+            = 4 * (3 * factorialDC(2))
+            = 4 * (3 * (2 * factorialDC(1)))
+            = 4 * (3 * (2 * (1 * factorialDC(0))))
+            = 4 * 3 * 2 * 1 * 1
+            = 24
+
+4.	Make a conclusion about the differences in how each method works. factorialBF()  and factorialDC()!
+
+
