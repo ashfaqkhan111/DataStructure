@@ -11,5 +11,4 @@ int main(){
     printf("%f\n",n);
     printf("%s",s);
     return 0;
-
 }

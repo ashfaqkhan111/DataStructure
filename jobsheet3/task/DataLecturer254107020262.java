@@ -6,7 +6,7 @@ public class DataLecturer254107020262 {
         System.out.printf("%-12s %-12s %-12s %-12s","Code", "Name", "Age","Gender");
         for (int i=0; i<lecturer.length; i++){
 
-           System.out.printf("\n%-12s %-12s %-12s %-12s\n",lecturer[i].code, lecturer[i].name,lecturer[i].age,lecturer[i].gender);
+        System.out.printf("\n%-12s %-12s %-12s %-12s\n",lecturer[i].code, lecturer[i].name,lecturer[i].age,lecturer[i].gender);
 
         }
         
