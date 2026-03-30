@@ -59,6 +59,20 @@ Answer: yes it is possible using while
             = 4 * 3 * 2 * 1 * 1
             = 24
 
-4.	Make a conclusion about the differences in how each method works. factorialBF()  and factorialDC()!
+
+
+Experiment 2 Questions 
+
+1.	Explain the differences between the two methods created powerBF() dan powerDC()!
+
+Answer : 
+
+        powerBf() yhis is int type of method using for loop to solve the the exponention problem using brute force method.
+        
+        powerDC() this method follow the divide and conqurer rules and solve the the exponention problem this is also type int 
+        which return value.
+
+2.	Does the combine stage exist in the provided code? Show the relevant part!
+
 
 
