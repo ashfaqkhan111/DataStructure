@@ -74,5 +74,73 @@ Answer :
 
 2.	Does the combine stage exist in the provided code? Show the relevant part!
 
+Answer : 
+        yes combine stage is present the 
+        if (exponent%2==1){
+                return (powerDc(base, exponent/2) * powerDc(base, exponent/2)*base);
+            }else 
+            {
+                return (powerDc(base, exponent/2)*powerDc(base, exponent/2));
+            }
+
+
+3.	In the powerBF() method, parameters are used to pass the base number and its exponent, even though the Power class 
+        already contains attributes for these values (baseNumber and exponent atribute). Do you think it is still relevant
+         for the method to have parameters? Could the method be implemented without parameters instead? If so, how would the
+          powerBF() method be structured without parameters?
+
+Answer : 
+        not strictly but if you want flixability then parameters are necessery  if you dont use parameters the code will still work 
+        but not flixable 
+        
+        int powerBf(){
+
+            int result =1;
+            for (int i=0; i<exponent; i++){
+                result *=base;
+            }
+            return result;
+        }
+
+4.	Summarize how the powerBF() and powerDC() methods work!
+
+Answer :
+        powerBf() is brute forece method using the trick of checiking every possiblity to solve the problem like using loops and more things 
+
+        powerDc() is method like recursive method using diviide and conqurer rules to solve the problem;
+
+
+Experiment 3
+
+
+1.	Why is mid variable needed in totalDC()method?
+
+Answer : 
+        the mid variable is used to find the the mid value using int mid = (l+r)/2;
+
+
+2.	Explain the following statements in totalDC()method?
+double leftSum = totalDc(profit, left, mid);
+ double rightSum = totalDc(profit, mid+1, right);
+
+ Answer :
+        this first line is used to find the sum of the left elements in array propit and voiceversa.
+
+
+3.	Why is it necessary to sum the results of lsum and rsum as shown below??
+    return leftSum+rightSum;
+
+Answer :
+        it is necessery beacuse we have to combine the results from both sides to get the actual results;
+
+
+4.	What is the base case of totalDC()method?
+
+Answer :
+        the base case for this method is 
+        if left == right then return prfit[left];
+
+
+
 
 
