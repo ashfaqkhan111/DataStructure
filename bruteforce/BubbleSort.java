@@ -5,7 +5,7 @@ public class BubbleSort {
         int arr [] = {2,4,1,3,5,9,7};
 
         for (int i=0; i<arr.length-1; i++){
-            System.out.println("the outer loop run "+(i+1) +" \n");
+            //System.out.println("the outer loop run "+(i+1) +" \n");
             for (int j=0; j<arr.length-i-1; j++){
                 // System.out.println("the inner loop runs  "+(j+1)+"\n");
 
