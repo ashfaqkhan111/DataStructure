@@ -19,7 +19,7 @@ public class Sum {
 
     double totalDc (double profit[], int left, int right){
         if(left == right){
-            return left;
+            return profit[left];
         }
         int mid = (left + right)/2 ;
         double leftSum = totalDc(profit, left, mid);

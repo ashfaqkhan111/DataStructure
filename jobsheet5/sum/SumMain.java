@@ -11,12 +11,13 @@ public class SumMain {
         Sum sum = new Sum(size);
 
         for (int i=0; i<size; i++){
-            System.out.print("Enter value element ke-"+(i+1));
+            System.out.print("Enter value element ke- "+(i+1)+ " : ");
             sum.profit[i] = in.nextDouble();
 
         } 
 
-        System.out.print("BF ; "+sum.totalBf());
+        System.out.print("BF : "+sum.totalBf());
+        System.out.print("DC : "+sum.totalDc(sum.profit, 0, size-1));
     }
     
 }
