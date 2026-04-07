@@ -1,0 +1,89 @@
+Questions 
+1. Explain the function of the following program code:
+if (arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                 
+                    arr[j] = arr[j+1];
+
+                    arr[j+1] = temp;}
+
+Ansewr : 
+        this is a conditional statement which doing value swaping like index j value is grater 
+        then j+1 then save it to temp veriable and later assign to j+1 
+
+
+
+2. Show the program code that implements the minimum value search algorithm in selection sort!
+
+Answer : 
+        for (int i=0; i<size-1; i++){
+        int minIndex = i;
+
+        for (int j=i+1; j<size; j++){
+            if(data[j] < data[minIndex]){
+                minIndex = j; 
+        
+        this code is searching for minimum value
+
+
+3. In insertion sort, explain the purpose of the condition in the loop. 
+
+Answer : 
+        The condition ensures that elements greater than the key are shifted to the right while staying within array bounds.
+
+
+
+4. In insertion sort, what is the purpose of the given command?
+
+data[j+1] = data[j];
+
+Answer : 
+        assigning value of index j in array data to index j+1 in array data.
+
+
+
+
+
+Experiment 2
+
+
+1.	From the following code snippet, answer question a-c:
+ 
+a.	Why is the condition in the bubbleSort() loop i < idx - 1?
+b.	Why is the condition in the bubbleSort() loop j < idx - i - 1?
+c.	If the number of data in listStudents is 50, how many times will the i loop execute? How many stages of Bubble Sort will be performed?
+
+Answer :
+        The loop runs idx - 1 times because each pass places one element in its correct position, so only n - 1 passes are required.
+        The i loop will execute 49 times
+The number of Bubble Sort stages (passes) is also 49
+
+
+2.	Modify the above program to allow dynamic student data input (from the keyboard) consisting of nim, name, studentClass, and gpa.
+
+Answer : 
+        program already updated in file 
+
+         for (int i=0; i<Size; i++){
+        System.out.print("Enter nim  : ");
+        String nim = in.nextLine();
+
+        System.out.print("Enter name  : ");
+        String name = in.nextLine();
+
+        System.out.print("Enter Class : ");
+        String studentClass = in.nextLine();
+
+        System.out.print("Enter Gpa : ");
+        double gpa = in.nextDouble();
+
+        in.nextLine();
+
+        Student254107020262 s = new Student254107020262(nim ,name, studentClass,gpa);
+        topStudent.add(s);
+        }
+
+        
+        
+
+
