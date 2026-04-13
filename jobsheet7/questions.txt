@@ -1,0 +1,132 @@
+experimemt 1 question 
+
+
+Q1 : What is the difference between the methods displayData and displayPosition in StudentSearch class
+Answer : displayData shows all student data stored in the array by looping through 
+each element. displayPosition only shows the index of a specific student that was searched or indicates if it was not found
+
+Q3 : If the NIM data inserted is not sorted from smallest to biggest value will the program encounter 
+an error is the result still correct why is that
+Answer : the program will not produce an error. sequential search will still work correctly 
+because it checks each element one by one. binary search will not give correct results because it requires 
+the data to be sorted in order to divide and search properly
+
+Q4 : Look at findSeqSearch method why position is initialized by -1 instead of 0
+Answer : position is initialized with -1 to indicate that the data has not been found. 
+using 0 would be incorrect because index 0 is a valid position in the array and could 
+cause confusion between found and not found
+
+
+
+
+Experiment 2
+
+Q1 : Show the program code in which runs the divide process
+Answer : the divide process happens in the sort method where the array is split into smaller parts
+
+```java
+private void sort(int listStd[], int left, int right){
+    if(left < right){
+        int mid = (left + right)/2;
+        sort(listStd, left, mid);
+        sort(listStd, mid+1, right);
+    }
+}
+```
+
+Q2 : Show the program code in which runs the conquer process
+Answer : the conquer process happens in the merge method where the divided parts are combined back in sorted order
+
+```java
+public void merge(int[] listStd, int left, int mid, int right){
+    int temp[] = new int[listStd.length];
+
+    for (int i = left; i <= right; i++){
+        temp[i] = listStd[i];
+    }
+
+    int a = left;
+    int b = mid + 1;
+    int c = left;
+
+    while (a <= mid && b <= right){
+        if (temp[a] <= temp[b]){
+            listStd[c] = temp[a];
+            a++;
+        } else {
+            listStd[c] = temp[b];
+            b++;
+        }
+        c++;
+    }
+
+    while (a <= mid){
+        listStd[c] = temp[a];
+        a++;
+        c++;
+    }
+
+    while (b <= right){
+        listStd[c] = temp[b];
+        b++;
+        c++;
+    }
+}
+```
+
+Q3 : If inserted NIM data is not sorted will the program give the correct result why
+Answer : sequential search will still give correct results because it checks all elements one by one. binary search will not give correct results because it requires sorted data
+
+If inserted data is sorted from largest to smallest and searching 20210 the binary search will not return the correct result because it assumes ascending order
+
+to fix this for descending order the comparison must be reversed
+
+```java
+public int findBinarySearch(int search, int left, int right){
+    if (left <= right){
+        int mid = (left + right)/2;
+
+        if (search == listStd[mid].nim){
+            return mid;
+        } else if (listStd[mid].nim < search){
+            return findBinarySearch(search, left, mid - 1);
+        } else {
+            return findBinarySearch(search, mid + 1, right);
+        }
+    }
+    return -1;
+}
+```
+
+Q4 : Modify program above so that the students amount inserted is matched with user input
+Answer : the program already uses user input for size but it must ensure input controls the loop and array size
+
+```java
+Scanner in = new Scanner(System.in);
+
+System.out.print("Enter amount of students : ");
+int size = in.nextInt();
+
+SearchSrudent search = new SearchSrudent(size);
+
+for (int i = 0; i < size; i++){
+    System.out.print("Enter NIM : ");
+    int nim = in.nextInt();
+    in.nextLine();
+
+    System.out.print("Enter Name : ");
+    String name = in.nextLine();
+
+    System.out.print("Enter Age : ");
+    int age = in.nextInt();
+
+    System.out.print("Enter GPA : ");
+    double gpa = in.nextDouble();
+    in.nextLine();
+
+    Student std = new Student(nim, name, age, gpa);
+    search.add(std);
+}
+```
+
+
