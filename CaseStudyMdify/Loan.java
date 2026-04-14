@@ -69,7 +69,7 @@ public class Loan {
 
         if (loan[mid].std.id == id) {
 
-            System.out.println("Found at index: " + mid);
+            System.out.println("Found at index: " + mid); ////// index found
             loan[mid].calculateFine();
             loan[mid].showLoan();
             return;

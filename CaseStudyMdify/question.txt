@@ -1,4 +1,4 @@
- Modify the list data to accept user input.
-
-2. Modify the sort menu by adding ascending or descending options (easy).
-Modify the search menu by adding a different search algorithm (hard)
+ 1.Modify the list data to accept user input.
+2. Modify the sort menu by adding ascending or descending options (easy)
+3. Modify the search menu by adding an index where the data is found.
+3.Modify the search menu by adding a different search algorithm (hard)
