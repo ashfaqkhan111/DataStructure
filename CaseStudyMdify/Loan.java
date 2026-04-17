@@ -54,7 +54,7 @@ public class Loan {
         System.out.println("------------------------");
     }
 
-    public static void binarySearchById(Loan[] loan, int id) {              /// here instead for selection sort i add binary search
+    public static void binarySearchById(Loan[] loan, int id) {              /// here instead for linear search i add binary search
 
     int left = 0;
     int right = loan.length - 1;
@@ -101,6 +101,13 @@ public class Loan {
                 }
             }
         }
+
+        for (int i=0; i< loan.length; i++){     ////print
+            if(loan[i] != null){
+                loan[i].calculateFine();
+                loan[i].showLoan();
+            }
+        }
     }
 
         public static void sortByFineDec(Loan[] loan) {         //// search desinding
@@ -115,6 +122,14 @@ public class Loan {
                     loan[j] = loan[j + 1];
                     loan[j + 1] = temp;
                 }
+            }
+
+        }
+
+        for (int i=0; i< loan.length; i++){
+            if(loan[i] != null){
+                loan[i].calculateFine();
+                loan[i].showLoan();
             }
         }
     }

@@ -29,15 +29,16 @@ public class Book {
             for (int i=0; i<book.length; i++){
             System.out.print("Enter code : ");
             String code = in.nextLine();
+
             System.out.print("Enetr Title : ");
             String tittle = in.nextLine().toLowerCase();
-
+                
             System.out.print("Enter Year : ");
             int year = in.nextInt();
 
-            in.nextLine();
+             in.nextLine();
 
-              Book obj1 = new Book(code, tittle,year);
+             book[i] = new Book(code, tittle,year);
         }
         }
 }

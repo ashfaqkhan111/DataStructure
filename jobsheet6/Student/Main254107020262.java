@@ -33,8 +33,8 @@ public class Main254107020262 {
 
         in.nextLine();
 
-        Student254107020262 s = new Student254107020262(nim ,name, studentClass,gpa);
-        topStudent.add(s);
+        Student254107020262 student = new Student254107020262(nim ,name, studentClass,gpa);
+        topStudent.add(student);
         }
     
 

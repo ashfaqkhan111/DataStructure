@@ -10,9 +10,9 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        Student[] student = new Student[3];
-        Book[] book = new Book[3];
-        Loan[] loan = new Loan[3];
+        Student[] student = new Student[2];
+        Book[] book = new Book[2];
+        Loan[] loan = new Loan[2];
 
         int choice;
 
@@ -24,7 +24,7 @@ public class Main {
             System.out.println("3. Input Loans");
             System.out.println("4. Show Loans");
             System.out.println("5. Search Loan by Student ID");
-            System.out.println("6. Sort Loan by Fine");
+            System.out.println("6. Sort by assinding");
             System.out.println("7. Sort by desinding");
              System.out.println("8. Sort by Fine");
               System.out.println("9. Exit");
@@ -32,6 +32,7 @@ public class Main {
 
             System.out.print("Enter choice: ");
             choice = in.nextInt();
+            in.nextLine();
 
             switch (choice) {
 
@@ -65,10 +66,13 @@ public class Main {
 
                 
                 case 5:
+                    Loan.sortByFineAsc(loan);
                     System.out.println("search by binary");
                     System.out.print("Enter Student ID: ");          ///// search by ide using binary
                     int id = in.nextInt();
                     Loan.binarySearchById(loan, id);
+
+                   
                     break;
 
                  case 6:
@@ -102,6 +106,8 @@ public class Main {
         
     
 }
+
+
 }
 }
 
