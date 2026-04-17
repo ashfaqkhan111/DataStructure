@@ -8,7 +8,7 @@ public class Bubble {
 
     Bubble (){}
 
-    Bubble(String name, int age, int nim, double gpa){
+    Bubble(String name, int age, int nim, double gpa){  
         this.name = name;
         this.age = age;
         this.nim = nim;

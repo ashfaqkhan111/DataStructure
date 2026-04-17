@@ -14,7 +14,7 @@ public class Main {
 
         Bubble.input(arrB,in);
 
-        System.out.printf("\n%-15s %-15s %-15s %-15s","Name","NIM","age","Gpa");
+        System.out.printf("\n%-15s %-15s %-15s %-15s","Name","NIM","age","Gpa");   
 
         for (int i=0; i<arrB.length; i++){
             arrB[i].print();

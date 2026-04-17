@@ -16,7 +16,7 @@ public class Process {
                 if (arrB[j].nim < arrB[j+1].nim){
                     Bubble temp = arrB[j];
                     arrB[j] = arrB[j+1];  
-                    arrB[j+1] = temp;
+                    arrB[j+1] = temp;  
                 }
             }
         }
