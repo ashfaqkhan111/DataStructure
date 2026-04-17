@@ -10,9 +10,9 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        Student[] student = new Student[5];
-        Book[] book = new Book[5];
-        Loan[] loan = new Loan[10];
+        Student[] student = new Student[3];
+        Book[] book = new Book[3];
+        Loan[] loan = new Loan[3];
 
         int choice;
 
@@ -25,7 +25,10 @@ public class Main {
             System.out.println("4. Show Loans");
             System.out.println("5. Search Loan by Student ID");
             System.out.println("6. Sort Loan by Fine");
-            System.out.println("7. Exit");
+            System.out.println("7. Sort by desinding");
+             System.out.println("8. Sort by Fine");
+              System.out.println("9. Exit");
+               
 
             System.out.print("Enter choice: ");
             choice = in.nextInt();
