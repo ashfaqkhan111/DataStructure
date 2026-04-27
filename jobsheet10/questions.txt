@@ -1,0 +1,63 @@
+2.1.3	Questions
+1.	Explain the role of the stack data structure in the student assignment management system. Why was a stack used 
+instead of another data structure (e.g., queue or list)?
+
+Answer :
+        In a student assignment management system, a stack is typically used to handle operations where the most recent
+         action needs to be processed first. This follows the LIFO principle (Last In, First Out). For example,
+          if students submit multiple assignments or updates, the latest submission is often the one that should be reviewed, 
+          edited, or undone first. A stack makes this efficient because insertion (push) and removal (pop) both happen at the 
+          top, giving fast access to the most recent item.
+
+
+2.	What is the difference between the push() and pop() methods in a stack, and how are they used in this program?
+answer : 
+        The push() and pop() methods are the two core operations of a stack, and they work in opposite ways:
+        push()  adds (inserts) an element to the top of the stack
+        pop()  removes (and usually returns) the element from the top of the stack
+
+3.	Why is it important to check the condition !isFull() before calling the push() method? What could go wrong if this check is removed?
+Answer :
+        Checking !isFull() before calling push() is important because it prevents the stack from exceeding its allocated capacity.
+
+4.	How many student assignments can be stored in the current implementation of the stack? Provide the specific 
+line of code or variable that determines this.
+Answer :
+        The number of student assignments that can be stored in the stack depends on the maximum size defined for the stack, usually set when the stack is created.
+
+        In a typical implementation, it is determined by something like:
+
+        an array declaration, e.g.
+        int[] stack = new int[10]; → can store 10 assignments
+        or a variable, e.g.
+        int MAX = 10;
+        int[] stack = new int[MAX];
+
+        So, the specific line or variable that controls the capacity is:
+
+        the array size (new int[SIZE]), or
+        a constant/variable like MAX, capacity, or size
+
+5.	Modify the existing stack implementation so that the system can also show the first student who submitted their assignment. 
+Describe the changes you made in both StudentDemo and StudentAssignmentStack classes.
+
+Answer :
+        programe changed as per requirement in files.
+
+
+6.	Implement a method to count and return the number of assignments currently stored in the stack.
+ Describe how your method works.
+
+Answer :
+
+7.	What did you learn from this experiment about stack-based systems? Reflect on a real-world 
+application where this kind of system might be useful.
+
+Answer :
+        From this experiment, the main takeaway is that a stack-based system is ideal when the 
+        most recent data needs to be handled first. The LIFO behavior makes operations like adding 
+        (push), removing (pop), and viewing the latest item (peek) very simple and efficient. I also 
+        learned that stacks are easy to implement but have limitations—like not being able to directly 
+        access the first (bottom) element without extra logic. That’s why we had to add a separate 
+        variable to track the first student.
+
