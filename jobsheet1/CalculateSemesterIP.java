@@ -1,7 +1,7 @@
 package jobsheet1;
 import java.util.*;
 
-public class CalculateSemesterIP {  
+public class CalculateSemesterIP {    
     
 
     public static String NumberToGrade(double Score){
