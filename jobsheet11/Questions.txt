@@ -1,0 +1,73 @@
+2.1.3. Question
+    1. In the constructor, why are the initial values of the front and rear attributes set to -1, while the size attribute is set to 0?
+    Answer :
+            he front and rear attributes are initialized to -1 because the queue is empty at the beginning, so there is no valid 
+            index for the first or last element. The size attribute is initialized to 0 because there are no elements stored in the queue yet.
+    2.In the Enqueue method, explain the meaning and purpose of the following code snippet!
+    Answer:
+            if (rear == max - 1) {
+    rear = 0;
+}
+
+    is used in a circular queue. When the rear index reaches the last position of the array (max - 1), it is reset to 0 so 
+    the queue can continue inserting elements from the beginning of the array. This allows efficient reuse of empty spaces 
+    created after dequeue operations.
+
+    3.In the Dequeue method, explain the meaning and purpose of the following code snippet!
+    Answer:
+            if (front == max - 1) {
+    front = 0;
+}
+
+    is used in the dequeue process of a circular queue. When the front index reaches the last position of the array,
+     it is reset to 0 so the queue can continue accessing elements from the beginning of the array.
+
+    4. In the print method, why does the loop variable i start from front instead of 0 (i.e., int i = 0)?
+    Answer :
+            In the print method, the loop variable i starts from front instead of 0 because the first active element 
+            in the queue may not always be located at index 0. After several dequeue operations, the front index moves 
+            forward, so printing must begin from the current front position to display only valid queue elements.
+
+    5. Review the print method again, and explain the meaning of the following code snippet!
+    Answer:
+            i = (i + 1) % max;
+
+        is used to move the index forward circularly. The modulo operator (%) ensures that when the index reaches 
+        the last array position, it returns to 0. This is the main mechanism of a circular queue.
+
+    6. Show the code snippet that represents a queue overflow!
+
+    Answer:
+
+    7. When a queue overflow or underflow occurs, the program continues to run and only displays informational text. 
+    Modify the program so that it stops when a queue overflow or underflow happens!
+
+
+    2.2.3 Questions
+    1. What is the main difference between the Queue (experiment 1) and StudentQueue classes in terms of the data type they manage? 
+    Why is this change in data type important?
+    Answer:
+            The main difference between the Queue class and the StudentQueue class is the type of data they store. The Queue
+             class in Experiment 1 stores primitive data types such as integers, while the StudentQueue class stores objects 
+             of the Student class. This change is important because the program now needs to manage complete student information 
+             such as NIM, name, study program, and class name instead of only simple numeric values.
+
+
+    2. How do the enqueue and dequeue methods in StudentQueue differ from those in Queue?
+    Answer:
+            In the StudentQueue class, the enqueue and dequeue methods work with Student objects, 
+            while in the Queue class they work with integer data. In StudentQueue, the enqueue method 
+            inserts a Student object into the queue, and the dequeue method removes and returns a Student 
+            object. The queue operations themselves are similar, but the managed data type is different.
+
+    3. Examine the constructor of the StudentQueue class: why is the front attribute initialized to 0, 
+    whereas in the Queue class from Experiment 1, the front attribute is initialized to -1?
+
+    Answer:
+            In the StudentQueue constructor, the front attribute is initialized to 0 because the implementation 
+            assumes the queue will start accessing elements from index 0. In the Queue class from Experiment 1, 
+            front is initialized to -1 to indicate that the queue is initially empty and there is no valid front index yet. 
+            Initializing with -1 is generally clearer for representing an empty queue.
+    4. Modify the program by adding a new method called viewRear() in the StudentQueue class to check 
+    the queue element at the rear position. Also, update the menu in the StudentQueueMain class by adding option 
+    : “Check rear of the queue,” so that the viewRear() method can be invoked.
