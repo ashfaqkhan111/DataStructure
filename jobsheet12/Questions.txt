@@ -1,0 +1,9 @@
+
+    2.1.2 Questions!
+    1. Why does compiling the program code result in the message "Linked List is Empty" on the first line?
+    Answer :
+            beacuse of the print function we call the print function before adding student.
+            
+    2. Explain the general purpose of the variable temp in each method!
+    3. Modify the code so that data can be added via keyboard input!
+    4. What would happen if we did not use the tail attribute? Would it affect the code implementation? Please explain.
