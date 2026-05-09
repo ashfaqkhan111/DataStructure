@@ -7,6 +7,6 @@ public class Node {
     Node(Student data){
         this.data = data;
         this.next = null;
-    }
+    } 
     
 }

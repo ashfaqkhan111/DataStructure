@@ -11,7 +11,7 @@ public class Student {
     }
 
     public void print(){
-        System.out.println(nim+" "+name+" "+major);
+        System.out.println(nim+" "+name+" "+major); 
     }
     
 }

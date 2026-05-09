@@ -50,7 +50,7 @@ public class Main {
                      break;
 
                 case 4:
-                    System.out.print("Queue is full : "+Q.isFull());
+                    System.out.print("Queue is full : "+Q.isFull()); 
                     break;
 
                 case 5 :
