@@ -1,3 +1,0 @@
-#!bin/bash
-read -r exprission
-echo "$exprission" | bc
