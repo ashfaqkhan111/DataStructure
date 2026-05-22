@@ -71,4 +71,49 @@ public class DoubleLinkList {
             System.out.println("the Linked list is currently empty");
         }
     }
+
+    public void removeFirst(){
+        if (isEmpty()){
+            System.out.println("Linked list is currently Empty!!");
+            return;
+        }else if(head == tail){
+            head=tail=null;
+        }else{
+            head = head.next;
+            head.prev = null;
+        }
+        
+    }
+
+    public void removeLast(){
+        if (isEmpty()){
+            System.out.println("linked list is currently Empty");
+            return;
+        }else if(head == tail){
+            head = tail = null;
+        }else{
+            tail = tail.prev;
+            tail.next=null;
+        }
+    }
+
+    public void removeAtIndex(int index){
+        if(isEmpty()){
+            System.out.println("Linked list is empty");
+            return;
+        }else if(index == 0){
+            removeFirst();
+        }else{
+            Node temp = head;
+            for (int i=0; i<index; i++){
+                temp=temp.next;
+            }
+            if(temp == tail){
+                removeLast();
+            }else{
+                temp.prev.next = temp.next;
+                temp.next.prev = temp.prev;
+            }
+        }
+    }
 }

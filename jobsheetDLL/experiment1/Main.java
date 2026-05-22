@@ -17,6 +17,12 @@ public class Main {
         dll.print();
         dll.insertAfter("120", new Student("114","Eiyu","Ti-1i",3.8));
         dll.print();
+
+        dll.removeFirst();
+        dll.removeLast();
+        dll.print();
+        dll.removeAtIndex(1);
+        dll.print();
     
     
     }
