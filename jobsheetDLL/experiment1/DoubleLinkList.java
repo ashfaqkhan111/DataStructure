@@ -30,7 +30,7 @@ public class DoubleLinkList {
         if (isEmpty()){
             head=tail=newNode;
         }else{
-            tail.next = tail;
+            tail.next = newNode;
             newNode.prev = tail;
             tail = newNode;
         }
@@ -42,13 +42,14 @@ public class DoubleLinkList {
         while (currNode != null){
             if(currNode.data.nim.equalsIgnoreCase(key)){
                 if (currNode == tail){
-                    addFirst(data);
+                    addLast(data);
                 }else {
                     newNode.next = currNode.next;
                     newNode.prev = currNode;
                     currNode.next.prev = newNode;
                     currNode.next = newNode;
                 }
+                break;
             }
             currNode = currNode.next;
         }
@@ -57,7 +58,7 @@ public class DoubleLinkList {
         }
     }
     public void print(){
-        if (isEmpty()){
+        if (!isEmpty()){
             Node currNode = head;
 
             while (currNode != null){

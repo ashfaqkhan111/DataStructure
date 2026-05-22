@@ -12,6 +12,6 @@ public class Student {
     }
 
     public void print(){
-        System.out.println(nim+" , "+name+" , "+className+" , "+gpa)
+        System.out.println(nim+" , "+name+" , "+className+" , "+gpa);
     }
 }
