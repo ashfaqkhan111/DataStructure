@@ -70,3 +70,66 @@ public void print(){
             System.out.println("the Linked list is currently empty");
         }
     }
+
+
+
+    1. What is the use of the following statement in the removeFirst() method?
+
+head = head.next;
+head.prev = null;
+
+This moves the head pointer to the second node in the list, then removes the backward link of the new head so it becomes the first node.
+
+---
+
+2. Why is it important to include conditions and processes like the ones below in both removeFirst() and removeLast() methods? Explain!
+
+else if(head == tail){
+head = tail = null;
+}
+
+This condition handles the case when the list has only one node. Without it, removing that node would cause errors or invalid references because head and tail would still point to a deleted node.
+
+---
+
+3. In the removeLast() method, if there is no tail attribute inside DoubleLinkedLists class, what approach or changes need to be made to the code of the method?
+
+If there is no tail pointer, the method must traverse the entire list from head to find the last node. A temporary pointer is used to reach the last node, and another pointer is used to track the previous node to update links.
+
+---
+
+4. What is the purpose of the initial if(isEmpty()) check in the remove(int index) method?
+
+It checks whether the list is empty. If it is empty, there is nothing to remove, so the method should stop or show a message instead of causing errors.
+
+---
+
+5. Explain how the method handles the removal of a node at the beginning (index == 0) and at the end (temp == tail) of the linked list.
+
+If index == 0, the method calls removeFirst() and updates head to the next node.
+If temp == tail, it calls removeLast() or updates tail to the previous node and sets tail.next to null.
+
+---
+
+6. Describe how the method updates the links between nodes when removing a node from the middle of the linked list.
+
+The previous node’s next pointer is linked to the next node, and the next node’s prev pointer is linked back to the previous node. This removes the current node from the chain.
+
+---
+
+7. The remove(int index) method currently does not check for negative index or index that exceed the size of the DoubleLinkedLists. Please add statements to handle these cases.
+
+To handle invalid indexes, you should add boundary checks before traversal:
+
+if(index < 0){
+System.out.println("Invalid index: cannot be negative");
+return;
+}
+
+if(index >= size){
+System.out.println("Invalid index: out of range");
+return;
+}
+
+This prevents errors and ensures safe deletion operations.
+
