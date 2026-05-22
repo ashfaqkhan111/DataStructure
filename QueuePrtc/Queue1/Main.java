@@ -7,7 +7,7 @@ public class Main {
     Q.enqueue(3);
     Q.enqueue(4);
 
-    Q.showFront();      
+    Q.showFront();         
     Q.showRear();
 
     Q.dequeue();
