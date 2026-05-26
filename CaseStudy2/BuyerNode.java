@@ -8,7 +8,7 @@ public class BuyerNode {
     BuyerNode(){}
 
     BuyerNode(BuyerDetails details){
-        this.details = details;
+        this.details = details; 
         this.next = null;
         this.prev = null;
     }
