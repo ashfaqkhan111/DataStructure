@@ -24,6 +24,8 @@ public class Main {
         dll.removeAtIndex(1);
         dll.print();
     
+
+        
     
     }
     
