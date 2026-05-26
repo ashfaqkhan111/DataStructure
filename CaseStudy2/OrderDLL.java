@@ -27,7 +27,6 @@ public class OrderDLL {
 
    }
 
-
    public void printDetails(){
     if (isEmpty()){
         System.out.println("The Queue is empty ");
@@ -43,8 +42,7 @@ public class OrderDLL {
         currNode.details.print();
         currNode = currNode.next;
     }
-
-    
+ 
    }
 
    public void sortOrder(){

@@ -30,21 +30,17 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    
-                   
+                     
                     System.out.print("Enter Name : ");
                     String name = in.nextLine();
 
                     System.out.print("Enter phone number :");
                     String phoneNo = in.nextLine();
-                    
 
                     BuyerDetails b = new BuyerDetails(name, phoneNo,customerCounter);
                     customerCounter++;
                     buyer.enqueue(b);
 
-                    
-                    
                     break;
 
                 case 2:

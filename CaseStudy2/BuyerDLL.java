@@ -5,10 +5,6 @@ public class BuyerDLL {
     BuyerNode head;
     BuyerNode tail;
 
-   
-
-    
-
     BuyerDLL (){
         head = null;
         tail = null;
@@ -91,8 +87,6 @@ public class BuyerDLL {
 
         System.out.print("Enter Price    : ");
         int price = in.nextInt();
-
-        
         
         OrderDetails orders = new OrderDetails(order.orderCounter, foodName, quantity, price, processBuyer);
         order.orderCounter++;
