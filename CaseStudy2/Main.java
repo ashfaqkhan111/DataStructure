@@ -7,7 +7,7 @@ public class Main {
 
         BuyerDLL buyer = new BuyerDLL();
 
-        OrderDLL order = new OrderDLL();
+        OrderDLL order = new OrderDLL(); 
 
         int choice;
 

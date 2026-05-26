@@ -6,7 +6,7 @@ public class OrderDLL {
    int orderCounter = 1;
 
    OrderDLL(){
-    head = null;
+    head = null; 
     tail = null;
    }
 

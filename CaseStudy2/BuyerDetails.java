@@ -7,7 +7,7 @@ public class BuyerDetails {
     BuyerDetails(String name, String phoneNo, int customer){
         this.name = name;
         this.phoneNo = phoneNo;
-        this.customerCounter = customer;
+        this.customerCounter = customer; 
     }
 
     public void print(){
