@@ -44,10 +44,12 @@ public class Main {
                     break;
 
                 case 2:
+                    System.out.println("=====buyers Details=====");
                     buyer.print();
                     break;
 
                 case 3:
+                     System.out.println("=====Enter Order details=====");
                     buyer.processQueue(order);
                     break;
 
@@ -57,6 +59,7 @@ public class Main {
                     break;
 
                 case 5: 
+                
                     order.revanue();
                     break;
 

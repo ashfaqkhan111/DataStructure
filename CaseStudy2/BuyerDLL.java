@@ -72,11 +72,13 @@ public class BuyerDLL {
 
         BuyerDetails processBuyer = dequeue();
 
-        System.out.println("Buyer : "+processBuyer.name);
+        
         System.out.println("---------------------------- ");
 
         System.out.println("Served buyer  ");
+        System.out.println("Buyer : "+processBuyer.name);
         System.out.println("---------------------------- ");
+
         processBuyer.print();
 
         System.out.print("Food name      : ");
