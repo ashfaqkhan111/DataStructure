@@ -11,7 +11,7 @@ public class OrderNode {
 
     OrderNode (OrderDetails details){
         this.details = details;
-        this.prev = null:
+        this.prev = null;
         this.next = null; 
 
     }

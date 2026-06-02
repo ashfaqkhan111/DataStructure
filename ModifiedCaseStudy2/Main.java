@@ -20,9 +20,10 @@ public class Main {
             System.out.println("1. Add customer data");
             System.out.println("2. Print customer data"); 
             System.out.println("3. Process & insert data");
-            System.out.println("4. Orders report ");
-            System.out.println("5. Total revanue");
-            System.out.println("6. Exit ");
+            System.out.println("4. Cancel queued customer");
+            System.out.println("5. Orders report ");
+            System.out.println("6. Total revanue");
+            System.out.println("7. Exit ");
              System.out.println("==================");
               System.out.print("Enter the choice : ");
               choice = in.nextInt();
@@ -52,15 +53,25 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.print("Enter queue number to cancel: ");
+                    int cancelNo = in.nextInt();
+                    in.nextLine();
+                    BuyerDetails canceled = buyer.cancelQueue(cancelNo);
+                    if (canceled != null) {
+                        System.out.println("Canceled queue for buyer: " + canceled.name);
+                    }
+                    break;
+
+                case 5:
                     order.sortOrder();
                     order.printDetails();
                     break;
 
-                case 5: 
+                case 6: 
                     order.revanue();
                     break;
 
-                case 6:
+                case 7:
                      System.out.println("Program Ended");
                      break;
 
@@ -70,7 +81,7 @@ public class Main {
                      System.out.println("Program Ended");
                     break;
             }
-        }while (choice != 6);
+        }while (choice != 7);
         
     }
     

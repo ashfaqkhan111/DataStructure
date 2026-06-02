@@ -61,6 +61,41 @@ public class BuyerDLL {
 
     }
 
+    public BuyerDetails cancelQueue(int queueNo){
+        if (isEmpty()){
+            System.out.println("the Queue is already empty ");
+            return null;
+        }
+
+        BuyerNode currNode = head;
+
+        while (currNode != null && currNode.details.customerCounter != queueNo){
+            currNode = currNode.next;
+        }
+
+        if (currNode == null){
+            System.out.println("Queue number " + queueNo + " not found.");
+            return null;
+        }
+
+        if (currNode == head){
+            if (head == tail){
+                head = tail = null;
+            } else {
+                head = head.next;
+                head.prev = null;
+            }
+        } else if (currNode == tail){
+            tail = tail.prev;
+            tail.next = null;
+        } else {
+            currNode.prev.next = currNode.next;
+            currNode.next.prev = currNode.prev;
+        }
+
+        return currNode.details;
+    }
+
     public void processQueue(OrderDLL order){
         Scanner in = new Scanner(System.in);
 
