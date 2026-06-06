@@ -1,0 +1,227 @@
+Questions
+
+1. Why is data search in a binary search tree more efficient compared to a regular binary tree
+
+A Binary Search Tree (BST) is more efficient because its nodes are organized according to a specific rule:
+
+* Values smaller than the current node are stored in the left subtree.
+* Values larger than the current node are stored in the right subtree.
+
+This structure allows the search process to eliminate half of the remaining nodes at each step. Instead of checking every node, the algorithm follows only one path from the root to the target value.
+
+In a regular binary tree, there is no ordering rule, so the search may require visiting every node. Therefore, searching in a BST is generally faster than searching in a regular binary tree.
+2. What are the purposes of the left and right attributes in the Node class?**
+
+The left and right attributes are references that connect a node to its child nodes.
+
+left points to the left child of the node.
+right points to the right child of the node.
+
+These references allow the tree structure to be formed and enable traversal, insertion, deletion, and searching operations.
+
+Example:
+Node left;
+Node right;
+
+
+If a node has no left or right child, the corresponding reference is null
+3a. What is the function of the root attribute in the BinaryTree class?
+
+The `root` attribute stores a reference to the first node of the tree.
+
+It serves as the entry point for all tree operations, including:
+
+Insertion
+Searching
+Traversal
+Deletion
+
+Every operation begins from the root and moves through the tree using the left and right references.
+
+3b. When a BinaryTree object is first created, what is the initial value of root?
+
+When a `BinaryTree` object is first created, the value of `root` is:
+
+
+null
+
+
+This indicates that the tree is empty and contains no nodes.
+
+Example:
+public BinaryTree() {
+    root = null;
+}
+4. When the tree is empty and a new node is to be added, what process takes place?
+
+When the tree is empty, the root is null.
+
+The insertion process creates a new node and assigns it directly to the root.
+
+Example:
+if(root == null){
+    root = new Node00(data);
+}
+
+After this step, the tree contains one node, which becomes the root of the tree.
+5. Consider the following line of code inside the add() method. Explain in detail the purpose of this line of code.
+
+
+if(data.ipk < current.data.ipk){
+     if(current.left != null){
+         current = current.left;
+     } else {
+         current.left = new Node00(data);
+         break;
+     }
+} else if(data.ipk > current.data.ipk){
+     if(current.right != null){
+         current = current.right;
+     } else {
+         current.right = new Node00(data);
+         break;
+     }
+}
+This code is responsible for inserting a new node into the correct position in a Binary Search Tree.
+
+The process works as follows:
+
+1. The value of data.ipk is compared with `current.data.ipk`.
+
+2. If data.ipk is smaller than `current.data.ipk`:
+
+   The new node belongs in the left subtree.
+   If a left child already exists, the algorithm moves to that child and continues searching.
+   If the left child is null, a new node is created and attached as the left child.
+
+3. If data.ipk is larger than current.data.ipk:
+
+   The new node belongs in the right subtree.
+   If a right child already exists, the algorithm moves to that child and continues searching.
+   If the right child is `null`, a new node is created and attached as the right child.
+
+4. The break statement stops the loop once the new node has been successfully inserted.
+
+This code ensures that the Binary Search Tree property is maintained, where smaller values are stored on the left and larger values are stored on the right.
+
+6. Explain the steps involved in the delete() method when removing a node that has two children. How does the getSuccessor() method assist in this process?
+
+Deleting a node with two children is more complex because removing it directly would disconnect part of the tree.
+
+The process is:
+
+1. Locate the node to be deleted.
+
+2. Find its inorder successor using the `getSuccessor()` method.
+
+   The inorder successor is the smallest value in the node's right subtree.
+   It is found by moving one step to the right child and then repeatedly moving left until no more left children exist.
+
+3. Replace the data of the node being deleted with the successor node.
+
+4. Remove the successor node from its original position.
+
+    Since the successor is the smallest node in the right subtree, it will have at most one child, making its removal simpler.
+
+Example:
+
+Before deletion:
+
+Delete node 50:
+
+ Successor = 60
+ Replace 50 with 60
+
+The `getSuccessor()` method helps maintain the Binary Search Tree structure after deletion by selecting a replacement node that preserves the BST ordering rules.
+
+
+
+1. What is the purpose of the data and idxLast attributes in the BinaryTreeArray class?
+
+The data attribute is used to store the nodes of the binary tree in an array. Each element of the array represents a node in the tree. The idxLast attribute stores the index of the last valid node in the array. It helps the program determine which positions in the array contain tree data and prevents traversal beyond the populated portion of the array.
+
+Example:
+
+Student02[] data;
+int idxLast;
+
+The data array stores the tree nodes, while idxLast indicates the last occupied position in the array.
+
+---
+
+2. What is the function of the populateData() method?
+
+The populateData() method is used to initialize the binary tree with an existing array of nodes and set the value of idxLast.
+
+Example:
+
+public void populateData(Student02[] data, int idxLast){
+this.data = data;
+this.idxLast = idxLast;
+}
+
+This method assigns the given array to the tree and records the index of the last valid element so that traversal operations can be performed correctly.
+
+---
+
+3. What is the purpose of the traverseInOrder() method?
+
+The traverseInOrder() method performs an inorder traversal of the binary tree.
+
+In inorder traversal, the nodes are visited in the following order:
+
+1. Left subtree
+2. Current node
+3. Right subtree
+
+The method recursively visits the left child, prints the current node, and then visits the right child. This ensures that all nodes are processed according to the inorder traversal sequence.
+
+---
+
+4. If a binary tree node is stored at index 2 in the array, at which indices are its left and right children located, respectively?
+
+In an array-based binary tree representation:
+
+Left child index = 2 × i + 1
+Right child index = 2 × i + 2
+
+If the node is stored at index 2:
+
+Left child index = 2 × 2 + 1 = 5
+
+Right child index = 2 × 2 + 2 = 6
+
+Therefore, the left child is located at index 5 and the right child is located at index 6.
+
+---
+
+5. What is the purpose of the statement int idxLast = 6 in Experiment 2, step 4?
+
+The statement:
+
+int idxLast = 6;
+
+indicates that the last valid node in the binary tree array is stored at index 6.
+
+Since array indexing starts at 0, an idxLast value of 6 means that there are seven valid elements in the array, occupying indices 0 through 6.
+
+This value is used by traversal methods to determine the boundary of the tree data and avoid accessing indices beyond the populated part of the array.
+
+6. Why are the indices 2 * idxStart + 1 and 2 * idxStart + 2 used in the recursive calls, and how do they relate to the structure of a binary tree represented as an array?
+
+In an array-based binary tree, the position of each child node can be calculated directly from the position of its parent node.
+
+For a node stored at index i:
+
+Left child index = 2 * i + 1
+
+Right child index = 2 * i + 2
+
+For example, if a node is stored at index 1:
+
+Left child index = 2 * 1 + 1 = 3
+
+Right child index = 2 * 1 + 2 = 4
+
+These formulas are used in the recursive calls because they allow the program to locate the left and right children without storing additional references. The formulas maintain the parent-child relationships within the array and accurately represent the structure of the binary tree.
+
